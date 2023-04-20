@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import Accueil from './components/Accueil/accueil';
+import { AuthContext, Tuser } from './context/authContext';
 
-function App() {
+export default function App() {
+
+  const [user, setUser] = useState<Tuser | null>(null);
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <AuthContext.Provider value={{
+      user: user,
+      setUser: setUser
+      }}>
+
+      {user === null && <Accueil></Accueil>}
+      {/* {user !== null && <CvAccueil></CvAccueil>} */}
+
+    </AuthContext.Provider>
+
   );
 }
 
-export default App;
