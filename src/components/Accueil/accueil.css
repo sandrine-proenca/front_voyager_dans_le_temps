@@ -1,8 +1,15 @@
-.bg-img {
-    position:fixed;
-    z-index: -1;
-    width: 220vh;
-    height: 100vh;
-    background-size: auto;
-    
+
+
+.container {
+    background-image: url(/public/photos/fond_ecran_appareil_photo.jpg);
+}
+
+h1 {
+    margin-top: 0;
+    color: black;
+    font-family: 'comic Sans SM';
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    background-image: url(/public/photos/fond_ecran_sepia.png);
 }

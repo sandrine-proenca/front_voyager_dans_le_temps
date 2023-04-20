@@ -1,4 +1,3 @@
-import { type } from "os";
 import { createContext } from "react";
 
 export type Tuser = {

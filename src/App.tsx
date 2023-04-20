@@ -14,7 +14,7 @@ export default function App() {
       }}>
 
       {user === null && <Accueil></Accueil>}
-      {/* {user !== null && <CvAccueil></CvAccueil>} */}
+      {/* {user !== null && } */}
 
     </AuthContext.Provider>
 
