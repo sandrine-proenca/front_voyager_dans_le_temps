@@ -1,15 +1,85 @@
-
-
-.container {
-    background-image: url(/public/photos/fond_ecran_appareil_photo.jpg);
+* {
+    margin: 0;
+    padding: 0;
 }
 
+body {
+    justify-content: center;
+    align-items: center;
+    background-image: url(/public/photos/fond_ecran_appareil_photo.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.presentation {
+    margin: auto;
+    margin-top: 20%;
+    margin-bottom: 20%;
+    max-width: 70%;
+    height: 90%;
+    background: rgba(202, 198, 160, 0.93);
+    mix-blend-mode: normal;
+    border: 2px solid #7E7B62;
+    backdrop-filter: blur(2px);
+    border-radius: 41px;
+}
+
+
+@media (min-width: 576px) {
+
+.presentation {
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+}
+
+
 h1 {
-    margin-top: 0;
-    color: black;
+    color: rgb(181,96,29)!important;
     font-family: 'comic Sans SM';
     font-style: italic;
     font-weight: bold;
     text-align: center;
+    margin-top: 0;
     background-image: url(/public/photos/fond_ecran_sepia.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+h2 {
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: 'comic Sans SM';
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    background-color: #11ffee00
+}
+
+p {
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: 'comic Sans SM';
+    font-style: italic;
+    text-align: center;
+    
+}
+
+.button {
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    text-overflow: ellipsis;
+    color: #FAEBD7!important;
+    font-family: 'comic Sans SM';
+    background-color: 	#696969!important;
+    margin: 10px;
+}
+
+footer {
+    text-align: center;
+    background-image: url(/public/photos/fond_ecran_sepia.png);
+    color: black;
+    margin-bottom: 0;
 }
