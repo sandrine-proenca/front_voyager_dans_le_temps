@@ -1,6 +1,11 @@
+@import url('https://fonts.cdnfonts.com/css/aguafina-script');
+
+                
+
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Aguafina Script', sans-serif;
 }
 
 body {
@@ -14,8 +19,9 @@ body {
 }
 
 .presentation {
+    padding: 5px;
     margin: auto;
-    margin-top: 20%;
+    margin-top: calc(20% + 2em);
     margin-bottom: 20%;
     max-width: 70%;
     height: 90%;
@@ -37,31 +43,36 @@ body {
 
 
 h1 {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    padding: 0.4em 0;
     color: rgb(181,96,29)!important;
-    font-family: 'comic Sans SM';
-    font-style: italic;
+    font-size: 2em;
     font-weight: bold;
     text-align: center;
     margin-top: 0;
     background-image: url(/public/photos/fond_ecran_sepia.png);
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: local;
     background-size: cover;
+    background-position: center;
+    z-index: 1;
+    /* text-shadow: rgb(5, 5, 5) 0 0 2px; */
+    /* text-shadow: 1px 1px rgba(0, 0, 0, 0.5), -1px 1px rgba(0, 0, 0, 0.5), -1px -1px rgba(0, 0, 0, 0.5), 1px -1px rgba(0, 0, 0, 0.5); */
 }
 
 h2 {
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-family: 'comic Sans SM';
-    font-style: italic;
-    font-weight: bold;
+    font-size: 2em;
+    /* font-weight: bold; */
     text-align: center;
     background-color: #11ffee00
 }
 
 p {
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-family: 'comic Sans SM';
-    font-style: italic;
+    font-size: 1.3em;
     text-align: center;
     
 }
@@ -72,7 +83,6 @@ p {
     text-align: center;
     text-overflow: ellipsis;
     color: #FAEBD7!important;
-    font-family: 'comic Sans SM';
     background-color: 	#696969!important;
     margin: 10px;
 }
