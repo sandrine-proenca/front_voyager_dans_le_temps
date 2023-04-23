@@ -1,5 +1,3 @@
-
-
 export type TResponse<TData = any> = {
     statusCode: number,
     message: string,
