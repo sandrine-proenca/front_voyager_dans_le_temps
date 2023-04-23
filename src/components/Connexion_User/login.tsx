@@ -1,5 +1,6 @@
 import { useContext, useState } from 'react';
 import { AuthContext } from '../../context/authContext';
+import { BASE_URL } from '../../constant/base_url';
 
 type ProfilLog = {
     email: string;
@@ -27,7 +28,7 @@ export default function Login() {
             body: JSON.stringify(body)
         };
 
-        const response = await fetch('http://localhost:8000/auth/login', requestOptions);
+        const response = await fetch(`${BASE_URL}auth/login`, requestOptions);
         const responseJson = await response.json();
         console.log(responseJson);
 

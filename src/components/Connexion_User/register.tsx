@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { BASE_URL } from "../../constant/base_url";
 
 // Typage de la partie body
 type ProfilRegister = {
@@ -80,7 +81,7 @@ export default function Register()
             body: JSON.stringify(body),
         };
         const response = await fetch(
-            "http://localhost:8000/users/register",
+            `${BASE_URL}users/register`,
             requestOptions
         );
         const responseJson = await response.json();
