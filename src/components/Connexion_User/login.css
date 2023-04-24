@@ -1,0 +1,18 @@
+/* .login, .register {
+    font-size: 2em;
+    padding: 5px 15px 5px 15px;
+    margin: auto;
+    margin-top: calc(20% + 2em);
+    margin-bottom: 20%;
+    max-width: 70%;
+    height: 50%;
+    background: rgba(202, 198, 160, 0.93);
+    mix-blend-mode: normal;
+    border: 2px solid #7E7B62;
+    backdrop-filter: blur(2px);
+    border-radius: 41px;
+} */
+
+h3 {
+    font-size: 3em;
+}

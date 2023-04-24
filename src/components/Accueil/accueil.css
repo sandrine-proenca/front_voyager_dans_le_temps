@@ -5,10 +5,11 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Aguafina Script', sans-serif;
+    /* font-family: 'Aguafina Script', sans-serif; */
 }
 
 body {
+    min-height: 100vh;
     justify-content: center;
     align-items: center;
     background-image: url(/public/photos/fond_ecran_appareil_photo.jpg);
@@ -18,12 +19,12 @@ body {
     background-size: cover;
 }
 
-.presentation {
+.presentation,.login, .register {
     padding: 5px;
     margin: auto;
-    margin-top: calc(20% + 2em);
-    margin-bottom: 20%;
-    max-width: 70%;
+    margin-top: calc(15% + 2em);
+    margin-bottom: 15%;
+    max-width: 60%;
     height: 90%;
     background: rgba(202, 198, 160, 0.93);
     mix-blend-mode: normal;
@@ -49,6 +50,7 @@ h1 {
     padding: 0.4em 0;
     color: rgb(181,96,29)!important;
     font-size: 2em;
+    font-family: 'Aguafina Script', sans-serif;
     font-weight: bold;
     text-align: center;
     margin-top: 0;
@@ -63,15 +65,15 @@ h1 {
 }
 
 h2 {
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    /* text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
     font-size: 2em;
-    /* font-weight: bold; */
+    font-weight: bold;
     text-align: center;
     background-color: #11ffee00
 }
 
 p {
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    /* text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
     font-size: 1.3em;
     text-align: center;
     
@@ -85,6 +87,7 @@ p {
     color: #FAEBD7!important;
     background-color: 	#696969!important;
     margin: 10px;
+    width: 100;
 }
 
 footer {
