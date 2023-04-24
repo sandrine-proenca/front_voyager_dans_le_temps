@@ -1,19 +1,27 @@
 import { useState } from 'react';
 import Accueil from './components/Accueil/accueil';
 import { AuthContext, Tuser } from './context/authContext';
+import Register from './components/Connexion_User/register';
+import Login from './components/Connexion_User/login';
+import Navbar from './components/Navbar/Navbar';
 
 export default function App() {
 
   const [user, setUser] = useState<Tuser | null>(null);
+  const [page, setPage] = useState(`accueil`)
   
   return (
 
+    
     <AuthContext.Provider value={{
       user: user,
       setUser: setUser
       }}>
 
-      {user === null && <Accueil></Accueil>}
+      <Navbar/>
+      {page === `accueil` && <Accueil setPage={setPage} page={page}/>}
+      {page === `register` && <Register setPage={setPage} page={page}/>}
+      {page === `login` && <Login setPage={setPage} page={page}/>}
 
     </AuthContext.Provider>
 
