@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { BASE_URL } from "../../constant/base_url";
+import './login.css';
+import '../Accueil/accueil.css';
 
 // Typage de la partie body
 type ProfilRegister = {
@@ -29,7 +31,10 @@ type ProfilRegister = {
  * * Des méthodes de fonctionnement aux events onChange(input), Onclick(buttom)
  * * Gestion des erreurs en Front, visible de l'utilisateur pour le guider
  */
-export default function Register()
+export default function Register(props: {
+    page: string;
+    setPage: React.Dispatch<React.SetStateAction<string>>;
+})
 {
     const [ emailInput, setEmailInput ] = useState("");
     const [ passwordInput, setPasswordInput ] = useState("");
@@ -118,24 +123,9 @@ export default function Register()
         document.getElementById('close-btn')?.click();
     }
 
-    return (<div>
-
-        {/* <!-- Modal -->*/}
-        <div className="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex={-1} aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div className="position-fixed top-0 vw-100 vh-100">
-                <div className=" w-100 h-100 bg-dark bg-opacity-10">
-                    <div className="modal-dialog modal-dialog-scrollable">
-                        <div className="modal-content">
-
-                            <div className="modal-header">
-                                <h1 className="modal-title fs-3 " id="staticBackdropLabel">Parlez-nous de vous ...</h1>
-
-                                {/* <!-- Buttom Close --> */}
-                                <button type="button" id="close-btn" className="btn-close" data-bs-dismiss="modal" aria-label="Close" onClick={resetInput}></button>
-
-                            </div>
-
-                            <form className="modal-body" onSubmit={fetchDataRegister}>
+    return (
+                            <div className="register">
+                                <h3 className='fs-1'>Parlez-nous de vous ...</h3>
 
                                 {/* type: donne le type de donnée dans l'input, classname: peut recevoir un nom pour la partie css, placeholder: définit un nom 
                                 dans l'input qui disparait une fois une donnée rentrée, value permet de revenir à l'état initiale sans les valeurs cf le schéma 
@@ -144,83 +134,78 @@ export default function Register()
                                 (@.fr) ou password (... motif caché) */}
 
                                 {/* <!-- Lastname input --> */}
-                                <div className="form-outline mb-3 ">
+                                <div className='container text-center'>
                                     <input required type="text" className="form-control text-center" placeholder="Nom de famille" value={lastnameInput} onChange={(event) => setLastnameInput(event.target.value)}></input>
-                                </div>
+                                {/* </div> */}
 
                                 {/* <!-- Firstname input --> */}
-                                <div className="form-outline mb-3">
+                                {/* <div className="form-outline mb-3"> */}
                                     <input required type="text" className="form-control text-center" placeholder="Prénom" value={firstnameInput} onChange={(event) => setFirstnameInput(event.target.value)}></input>
-                                </div>
+                                {/* </div> */}
 
                                 {/* <!-- Email input --> */}
-                                <div className="form-outline mb-3">
+                                {/* <div className="form-outline mb-3"> */}
                                     <input required type="email" className="form-control text-center" placeholder="Email" value={emailInput} onChange={(event) => setEmailInput(event.target.value)}></input>
-                                </div>
+                                {/* </div> */}
 
                                 {/* <!-- Password input --> */}
-                                <div className="form-outline mb-3">
+                                {/* <div className="form-outline mb-3"> */}
                                     <input required type="password" className="form-control text-center" placeholder="Mot de passe" value={passwordInput} onChange={(event) => setPasswordInput(event.target.value)}></input>
-                                </div>
+                                {/* </div> */}
 
                                 {/* <!-- Birthday input --> */}
-                                <div className="form-outline mb-3">
+                                {/* <div className="form-outline mb-3"> */}
                                     <input required type="password" className="form-control text-center" placeholder="Date d'anniversaire (facultatif)" value={birthdayInput} onChange={(event) => setBirthdayInput(event.target.value)}></input> {/* à vérifier */}
-                                </div>
+                                {/* </div> */}
 
                                 {/* <!-- Phone_number input --> */}
-                                <div className="form-outline mb-3">
+                                {/* <div className="form-outline mb-3"> */}
                                     <input type="text" className="form-control text-center" placeholder="Votre numéro de téléphone (facultatif)" value={phoneInput} onChange={(event) => setPhoneInput(event.target.value)}></input>
-                                </div>
+                                {/* </div> */}
 
                                 {/* <!-- Adress input --> */}
-                                <div className="form-outline mb-3">
+                                {/* <div className="form-outline mb-3"> */}
                                     <input type="text" className="form-control text-center" placeholder="Votre adresse (facultatif)" value={addressInput} onChange={(event) => setAdressInput(event.target.value)}></input>
-                                </div>
+                                {/* </div> */}
 
                                 {/* <!-- Job input --> */}
-                                <div className="form-outline mb-3">
+                                {/* <div className="form-outline mb-3"> */}
                                     <input type="text" className="form-control text-center" placeholder="Votre métier ? (facultatif)" value={jobInput} onChange={(event) => setJobInput(event.target.value)}></input>
-                                </div>
+                                {/* </div> */}
 
                                 {/* <!-- Father input --> */}
-                                <div className="form-outline mb-3">
+                                {/* <div className="form-outline mb-3"> */}
                                     <input type="text" className="form-control text-center" placeholder="Votre père ? (facultatif)" value={fatherInput} onChange={(event) => setFatherInput(event.target.value)}></input>
-                                </div>
+                                {/* </div> */}
 
                                 {/* <!-- Mother input --> */}
-                                <div className="form-outline mb-3">
+                                {/* <div className="form-outline mb-3"> */}
                                     <input type="text" className="form-control text-center" placeholder="Votre mère ? (facultatif)" value={motherInput} onChange={(event) => setMotherInput(event.target.value)}></input>
-                                </div>
+                                {/* </div> */}
 
                                 {/* <!-- Myself input --> */}
-                                <div className="form-outline mb-3">
+                                {/* <div className="form-outline mb-3"> */}
                                     <input type="text" className="form-control text-center" placeholder="Présentez vous ! (facultatif)" value={myselfInput} onChange={(event) => setMyselfInput(event.target.value)}></input>
-                                </div>
+                                {/* </div> */}
 
                                 {/* <!-- Travel input --> */}
-                                <div className="form-outline mb-3">
+                                {/* <div className="form-outline mb-3"> */}
                                     <input type="text" className="form-control text-center" placeholder="Vos voyages ? (facultatif)" value={travelInput} onChange={(event) => setTravelInput(event.target.value)}></input>
-                                </div>
+                                {/* </div> */}
 
                                 {/* <!-- Anecdote input --> */}
-                                <div className="form-outline mb-3">
+                                {/* <div className="form-outline mb-3"> */}
                                     <input type="text" className="form-control text-center" placeholder="Une anecdote ? (facultatif)" value={anecdoteInput} onChange={(event) => setAnecdoteInput(event.target.value)}></input>
-                                </div>
+                                {/* </div> */}
 
                                 {/* <!-- Buttom register --> */}
-                                {/* <div className="modal-footer col-center"> */}
-                                <div className="col-center text-center align-items-center mt-4">
-                                    <button type="submit" className="btn btn-primary mb-4 col-10">Enregister</button>
+                                
+                                <div className='row justify-content-evenly text-center align-items-center mt-5'>
+                                    <button type="submit" className="btn button btn-color col-5 btn-sm-10" onClick={fetchDataRegister}>Enregister</button>
                                 </div>
 
-                            </form>
+                                </div>
 
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                            </div>
     )
 }
