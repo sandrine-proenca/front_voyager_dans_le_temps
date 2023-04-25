@@ -20,7 +20,7 @@ body {
     background-size: cover;
 }
 
-.presentation,.login, .register {
+.presentation, .login, .register, .compteUser,.updateUsers {
     padding-top: 20px;
     padding-bottom: 20px;
     margin: auto;
@@ -72,6 +72,11 @@ h2 {
     font-weight: bold;
     text-align: center;
     background-color: #11ffee00
+}
+
+h3 {
+    padding-top: 20px;
+    font-size: 3em;
 }
 
 p {

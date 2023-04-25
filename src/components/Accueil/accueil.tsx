@@ -17,16 +17,14 @@ export default function Accueil(props: {
                 <p>Vous pourez y déposer une photo de vos ailleux ou de votre famille et la commenter.</p><br />
                 <p>Vous pouvez également visionner toutes les photos mises à disposition.</p><br />
                 <p>Bon voyage dans le temps !</p>
+                
                 <div className=" form-log rounded-5 shadow-5-strong p-5">
-
                     <div className='row justify-content-evenly text-center align-items-center mt-5'>
-                        <button type="button" className="btn button btn-color col-lg-5 col-sm-3 btn-sm" onClick={() => props
-                            .setPage(`register`)}>
+                        <button type="button" className="btn button btn-color col-lg-5 col-sm-3 btn-sm" onClick={() => props.setPage(`register`)}>
                             inscription
                         </button>
 
-                        <button type="button" className="btn button btn-color col-lg-5 col-sm-3 btn-sm" onClick={() => props
-                            .setPage(`login`)}>
+                        <button type="button" className="btn button btn-color col-lg-5 col-sm-3 btn-sm" onClick={() => props.setPage(`login`)}>
                             connexion
                         </button>
                     </div>
