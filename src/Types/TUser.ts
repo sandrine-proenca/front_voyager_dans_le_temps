@@ -12,5 +12,16 @@ export type TUser = {
     mother: string,
     myself: string,
     travel: string,
-    anecdote: string
+    anecdote: string,
+    album: [{
+        id: number,
+        name: string,
+        photo: [{
+            id: number,
+            photo: string,
+            information: string,
+            mimeType: string
+        }],
+}],
+    access_token: string
 }

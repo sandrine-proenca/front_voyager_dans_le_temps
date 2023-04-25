@@ -124,88 +124,79 @@ export default function Register(props: {
     }
 
     return (
-                            <div className="register">
-                                <h3 className='fs-1'>Parlez-nous de vous ...</h3>
+        <div className="register">
+            <div className="row justify-content-center ">
+                {/* <!-- title register --> */}
+                <h3 className='fs-1 text-center text-white'>Parlez-nous de vous !</h3>
+                <div className=" form-log rounded-5 shadow-5-strong p-5">
 
-                                {/* type: donne le type de donnée dans l'input, classname: peut recevoir un nom pour la partie css, placeholder: définit un nom 
+                    {/* type: donne le type de donnée dans l'input, classname: peut recevoir un nom pour la partie css, placeholder: définit un nom 
                                 dans l'input qui disparait une fois une donnée rentrée, value permet de revenir à l'état initiale sans les valeurs cf le schéma 
                                 dans la fonction plus haut, onchange: permet de sauvegarder la donnée saisie dans l'input avant la validation par un onClick
                                 form-control dans classname permet de dire à l'input d'appliquer le champs prévu par bootstrap quand le type est fixé soit email
                                 (@.fr) ou password (... motif caché) */}
 
-                                {/* <!-- Lastname input --> */}
-                                <div className='container text-center'>
-                                    <input required type="text" className="form-control text-center" placeholder="Nom de famille" value={lastnameInput} onChange={(event) => setLastnameInput(event.target.value)}></input>
-                                {/* </div> */}
+                    {/* <!-- Lastname input --> */}
+                    <div className="form-outline mb-4 mt-4">
+                        <label className='Nom de famille'>Votre nom de famille :</label>
+                        <input required type="text" className="form-control" placeholder="Nom de famille" value={lastnameInput} onChange={(event) => setLastnameInput(event.target.value)}></input>
 
-                                {/* <!-- Firstname input --> */}
-                                {/* <div className="form-outline mb-3"> */}
-                                    <input required type="text" className="form-control text-center" placeholder="Prénom" value={firstnameInput} onChange={(event) => setFirstnameInput(event.target.value)}></input>
-                                {/* </div> */}
+                        {/* <!-- Firstname input --> */}
+                        <label className='Prénom'>Votre prénom :</label>
+                        <input required type="text" className="form-control" placeholder="Prénom" value={firstnameInput} onChange={(event) => setFirstnameInput(event.target.value)}></input>
 
-                                {/* <!-- Email input --> */}
-                                {/* <div className="form-outline mb-3"> */}
-                                    <input required type="email" className="form-control text-center" placeholder="Email" value={emailInput} onChange={(event) => setEmailInput(event.target.value)}></input>
-                                {/* </div> */}
+                        {/* <!-- Email input --> */}
+                        <label className='email'>Votre adresse mail :</label>
+                        <input required type="email" className="form-control" placeholder="Email" value={emailInput} onChange={(event) => setEmailInput(event.target.value)}></input>
 
-                                {/* <!-- Password input --> */}
-                                {/* <div className="form-outline mb-3"> */}
-                                    <input required type="password" className="form-control text-center" placeholder="Mot de passe" value={passwordInput} onChange={(event) => setPasswordInput(event.target.value)}></input>
-                                {/* </div> */}
+                        {/* <!-- Password input --> */}
+                        <label className='password'>Votre mot de passe :</label>
+                        <input required type="password" className="form-control" placeholder="Mot de passe" value={passwordInput} onChange={(event) => setPasswordInput(event.target.value)}></input>
 
-                                {/* <!-- Birthday input --> */}
-                                {/* <div className="form-outline mb-3"> */}
-                                    <input required type="password" className="form-control text-center" placeholder="Date d'anniversaire (facultatif)" value={birthdayInput} onChange={(event) => setBirthdayInput(event.target.value)}></input> {/* à vérifier */}
-                                {/* </div> */}
+                        {/* <!-- Birthday input --> */}
+                        <label className='birthday'>Votre date d'anniversaire :</label>
+                        <input type="birthday" className="form-control" placeholder="Date d'anniversaire (facultatif)" value={birthdayInput} onChange={(event) => setBirthdayInput(event.target.value)}></input>
 
-                                {/* <!-- Phone_number input --> */}
-                                {/* <div className="form-outline mb-3"> */}
-                                    <input type="text" className="form-control text-center" placeholder="Votre numéro de téléphone (facultatif)" value={phoneInput} onChange={(event) => setPhoneInput(event.target.value)}></input>
-                                {/* </div> */}
+                        {/* <!-- Phone_number input --> */}
+                        <label className='phone'>Votre numéro de téléphone :</label>
+                        <input type="text" className="form-control" placeholder="Votre numéro de téléphone (facultatif)" value={phoneInput} onChange={(event) => setPhoneInput(event.target.value)}></input>
 
-                                {/* <!-- Adress input --> */}
-                                {/* <div className="form-outline mb-3"> */}
-                                    <input type="text" className="form-control text-center" placeholder="Votre adresse (facultatif)" value={addressInput} onChange={(event) => setAdressInput(event.target.value)}></input>
-                                {/* </div> */}
+                        {/* <!-- Adress input --> */}
+                        <label className='adresse'>Votre adresse :</label>
+                        <input type="text" className="form-control" placeholder="Votre adresse (facultatif)" value={addressInput} onChange={(event) => setAdressInput(event.target.value)}></input>
 
-                                {/* <!-- Job input --> */}
-                                {/* <div className="form-outline mb-3"> */}
-                                    <input type="text" className="form-control text-center" placeholder="Votre métier ? (facultatif)" value={jobInput} onChange={(event) => setJobInput(event.target.value)}></input>
-                                {/* </div> */}
+                        {/* <!-- Job input --> */}
+                        <label className='job'>Votre métier :</label>
+                        <input type="text" className="form-control" placeholder="Votre métier ? (facultatif)" value={jobInput} onChange={(event) => setJobInput(event.target.value)}></input>
 
-                                {/* <!-- Father input --> */}
-                                {/* <div className="form-outline mb-3"> */}
-                                    <input type="text" className="form-control text-center" placeholder="Votre père ? (facultatif)" value={fatherInput} onChange={(event) => setFatherInput(event.target.value)}></input>
-                                {/* </div> */}
+                        {/* <!-- Father input --> */}
+                        <label className='father'>Votre père :</label>
+                        <input type="text" className="form-control" placeholder="Votre père ? (facultatif)" value={fatherInput} onChange={(event) => setFatherInput(event.target.value)}></input>
 
-                                {/* <!-- Mother input --> */}
-                                {/* <div className="form-outline mb-3"> */}
-                                    <input type="text" className="form-control text-center" placeholder="Votre mère ? (facultatif)" value={motherInput} onChange={(event) => setMotherInput(event.target.value)}></input>
-                                {/* </div> */}
+                        {/* <!-- Mother input --> */}
+                        <label className='mother'>Votre mère :</label>
+                        <input type="text" className="form-control" placeholder="Votre mère ? (facultatif)" value={motherInput} onChange={(event) => setMotherInput(event.target.value)}></input>
 
-                                {/* <!-- Myself input --> */}
-                                {/* <div className="form-outline mb-3"> */}
-                                    <input type="text" className="form-control text-center" placeholder="Présentez vous ! (facultatif)" value={myselfInput} onChange={(event) => setMyselfInput(event.target.value)}></input>
-                                {/* </div> */}
+                        {/* <!-- Myself input --> */}
+                        <label className='myself'>Présentez vous :</label>
+                        <input type="text" className="form-control" placeholder="Présentez vous ! (facultatif)" value={myselfInput} onChange={(event) => setMyselfInput(event.target.value)}></input>
 
-                                {/* <!-- Travel input --> */}
-                                {/* <div className="form-outline mb-3"> */}
-                                    <input type="text" className="form-control text-center" placeholder="Vos voyages ? (facultatif)" value={travelInput} onChange={(event) => setTravelInput(event.target.value)}></input>
-                                {/* </div> */}
+                        {/* <!-- Travel input --> */}
+                        <label className='travel'>Vos voyages :</label>
+                        <input type="text" className="form-control" placeholder="Vos voyages ? (facultatif)" value={travelInput} onChange={(event) => setTravelInput(event.target.value)}></input>
 
-                                {/* <!-- Anecdote input --> */}
-                                {/* <div className="form-outline mb-3"> */}
-                                    <input type="text" className="form-control text-center" placeholder="Une anecdote ? (facultatif)" value={anecdoteInput} onChange={(event) => setAnecdoteInput(event.target.value)}></input>
-                                {/* </div> */}
+                        {/* <!-- Anecdote input --> */}
+                        <label className='anecdote'>Vos anecdotes :</label>
+                        <input type="text" className="form-control" placeholder="Une anecdote ? (facultatif)" value={anecdoteInput} onChange={(event) => setAnecdoteInput(event.target.value)}></input>
 
-                                {/* <!-- Buttom register --> */}
-                                
-                                <div className='row justify-content-evenly text-center align-items-center mt-5'>
-                                    <button type="submit" className="btn button btn-color col-5 btn-sm-10" onClick={fetchDataRegister}>Enregister</button>
-                                </div>
+                        {/* <!-- Buttom register --> */}
+                        <div className='row justify-content-evenly text-center align-items-center mt-5'>
+                            <button type="submit" className="btn button btn-color col-lg-5 col-sm-10 btn-sm" onClick={fetchDataRegister}>Enregister</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-                                </div>
-
-                            </div>
     )
 }
