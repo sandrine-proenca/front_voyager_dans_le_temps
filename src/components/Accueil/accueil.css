@@ -5,6 +5,7 @@
 * {
     margin: 0;
     padding: 0;
+    max-width: 220vh;
     /* font-family: 'Aguafina Script', sans-serif; */
 }
 
@@ -20,7 +21,8 @@ body {
 }
 
 .presentation,.login, .register {
-    padding: 5px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     margin: auto;
     margin-top: calc(15% + 2em);
     margin-bottom: 15%;

@@ -1,13 +1,14 @@
 import { useState } from 'react';
 import Accueil from './components/Accueil/accueil';
-import { AuthContext, Tuser } from './context/authContext';
+import { AuthContext } from './context/authContext';
 import Register from './components/Connexion_User/register';
 import Login from './components/Connexion_User/login';
 import Navbar from './components/Navbar/Navbar';
+import { TUser } from './Types/TUser';
 
 export default function App() {
 
-  const [user, setUser] = useState<Tuser | null>(null);
+  const [user, setUser] = useState<TUser | null>(null);
   const [page, setPage] = useState(`accueil`)
   
   return (
