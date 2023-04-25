@@ -1,8 +1,8 @@
 import { useContext, useState } from 'react';
 import { AuthContext } from '../../context/authContext';
 import { BASE_URL } from '../../constant/base_url';
-import './login.css';
 import '../Accueil/accueil.css';
+import { UserContext } from '../../context/userContext';
 
 type ProfilLog = {
     email: string;
@@ -17,7 +17,7 @@ export default function Login(props: {
 
     const [ emailInput, setEmailLogInput ] = useState("")
     const [ passwordInput, setPasswordLogInput ] = useState("")
-
+    const {user, onUserChange} = useContext(UserContext)
     const auth = useContext(AuthContext)
     //console.log(auth);    
 
@@ -41,7 +41,8 @@ export default function Login(props: {
 
         if (responseJson.access_token)
         {
-            auth.setUser({ ...responseJson });
+            /* auth.setUser({ ...responseJson }); */
+            onUserChange({ ...responseJson.user})
             resetInputLog()
         }
 
@@ -86,7 +87,7 @@ export default function Login(props: {
                             <button type="button" className="btn button btn-color col-lg-5 col-sm-10 btn-sm" onClick={() =>
                             {
                                 fetchDataLog();
-                                props.setPage(`accueil`)
+                                props.setPage(`compteUser`)
                             }}>Connexion</button>
 
                             <button type="button" className="btn button btn-color col-lg-5 col-sm-10 btn-sm" onClick={() => props

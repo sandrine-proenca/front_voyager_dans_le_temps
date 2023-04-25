@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { BASE_URL } from "../../constant/base_url";
-import './login.css';
 import '../Accueil/accueil.css';
 
 // Typage de la partie body
