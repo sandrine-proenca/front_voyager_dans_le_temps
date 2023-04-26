@@ -8,7 +8,6 @@ export default function UpdateUsers(props: {
 })
 {
     const { user, onUserChange } = useContext(UserContext);
-console.log(user);
     const token = user.access_token
     const { album, id, password, access_token, ...newUser } = user;
 
@@ -38,14 +37,18 @@ console.log(user);
             body: jsonUser
         };
 
-        console.log(jsonUser);
         
 
         fetch(`${BASE_URL}users`, options)
             .then((response) => response.json())
-            .then((donnee) => onUserChange(donnee.data.userUpdated.value))
+            .then((donnee) => onUserChange(donnee.data)
+            )
             .catch((erreur) => `${erreur}`);
+
+           /*  console.log("azert",onUserChange(donnee.data.userUpdated.value)); */
+            
     }
+    
     return (
         <div className="updateUsers">
             <form className="row justify-content-center " noValidate>
