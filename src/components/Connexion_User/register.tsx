@@ -124,7 +124,10 @@ export default function Register(props: {
 
     return (
         <div className="register">
-            <div className="row justify-content-center ">
+            <div className="container  text-center">
+                <div className="position-relative">
+                    <button type="button" className="btn-close position-absolute top-0 end-0 text-white" onClick={() => props.setPage(`accueil`)}></button>
+                </div>
                 {/* <!-- title register --> */}
                 <h3 className='fs-1 text-center text-white'>Parlez-nous de vous !</h3>
                 <div className=" form-log rounded-5 shadow-5-strong p-5">
@@ -190,7 +193,8 @@ export default function Register(props: {
 
                         {/* <!-- Buttom register --> */}
                         <div className='row justify-content-evenly text-center align-items-center mt-5'>
-                            <button type="submit" className="btn button btn-color col-lg-5 col-sm-10 btn-sm" onClick={fetchDataRegister}>Enregister</button>
+                            <button type="submit" className="btn button btn-color col-lg-5 col-sm-10 btn-sm" onClick={
+                                fetchDataRegister}>Enregister</button>
                         </div>
                     </div>
                 </div>

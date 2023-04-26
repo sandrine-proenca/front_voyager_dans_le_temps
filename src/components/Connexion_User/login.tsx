@@ -42,7 +42,7 @@ export default function Login(props: {
         if (responseJson.access_token)
         {
             /* auth.setUser({ ...responseJson }); */
-            onUserChange({ ...responseJson.user})
+            onUserChange({...responseJson.user,access_token : responseJson.access_token})
             resetInputLog()
         }
 
