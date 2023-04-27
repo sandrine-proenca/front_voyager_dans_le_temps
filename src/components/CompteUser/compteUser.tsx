@@ -33,7 +33,7 @@ export function CompteUser(props: {
                 <h4>Votre père:</h4>
                 <p>{user.father}</p>
                 <h4>Votre mère:</h4>
-                <p></p>{user.mother}
+                <p>{user.mother}</p>
                 <h4>Vous:</h4>
                 <p>{user.myself}</p>
                 <h4>Vos voyages:</h4>

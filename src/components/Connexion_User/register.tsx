@@ -193,8 +193,10 @@ export default function Register(props: {
 
                         {/* <!-- Buttom register --> */}
                         <div className='row justify-content-evenly text-center align-items-center mt-5'>
-                            <button type="submit" className="btn button btn-color col-lg-5 col-sm-10 btn-sm" onClick={
-                                fetchDataRegister}>Enregister</button>
+                            <button type="submit" className="btn button btn-color col-lg-5 col-sm-10 btn-sm" onClick={(e) =>
+                                    {
+                                        fetchDataRegister(e);
+                                        props.setPage('login')}}>Enregister</button>
                         </div>
                     </div>
                 </div>
