@@ -18,9 +18,12 @@ export const UserContext = createContext<UserContextInterface>({
 
 export const UserContextProvider = ({ children }: UserContextProps) => {
     const [user, setUser] = useState<TUser>(userDefault);
+
     const handleUserChange = (user: TUser) => {
+        
         setUser(user);
     };
+
     const contextValue = {
         user: user,
         onUserChange: handleUserChange,

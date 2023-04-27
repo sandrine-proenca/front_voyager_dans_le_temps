@@ -7,6 +7,7 @@ import Navbar from './components/Navbar/Navbar';
 import { TUser } from './Types/TUser';
 import { CompteUser } from './components/CompteUser/compteUser';
 import UpdateUsers from './components/CompteUser/updateUser';
+import DeleteUser from './components/CompteUser/deleteUser';
 
 export default function App() {
 
@@ -27,6 +28,7 @@ export default function App() {
       {page === `login` && <Login setPage={setPage} page={page}/>}
       {page === `compteUser` && <CompteUser setPage={setPage}/>}
       {page === `updateUsers` && <UpdateUsers setPage={setPage}/>}
+      {page === `deleteUser` && <DeleteUser setPage={setPage}/>}
 
     </AuthContext.Provider>
 

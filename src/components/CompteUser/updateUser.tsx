@@ -8,10 +8,14 @@ export default function UpdateUsers(props: {
 })
 {
     const { user, onUserChange } = useContext(UserContext);
-    const token = user.access_token
+
+    const token = user.access_token;
+
     const { album, id, password, access_token, ...newUser } = user;
 
     const [ userUpdated, setUserUpdated ] = useState(newUser);
+
+
 
     const inputChange = (e: React.BaseSyntheticEvent) =>
     {
@@ -21,6 +25,8 @@ export default function UpdateUsers(props: {
             return { ...userUpdated, [ name ]: e.target.value };
         });
     };
+
+
 
     const update = (e: React.BaseSyntheticEvent) =>
     {
@@ -37,17 +43,16 @@ export default function UpdateUsers(props: {
             body: jsonUser
         };
 
-        
-
         fetch(`${BASE_URL}users`, options)
             .then((response) => response.json())
-            .then((donnee) => onUserChange(donnee.data)
-            )
+            .then((donnee) => {
+                donnee.data.access_token = token;
+                onUserChange(donnee.data)
+            })
             .catch((erreur) => `${erreur}`);
 
-           /*  console.log("azert",onUserChange(donnee.data.userUpdated.value)); */
-            
     }
+    
     
     return (
         <div className="updateUsers">
