@@ -52,11 +52,11 @@ export function CompteUser(props: {
                             Supprimer mon compte
                         </button>
 
-                        <button type="button" className="btn button btn-color col-lg-5 col-sm-3 btn-sm" onClick={() => props.setPage(``)}>
+                        <button type="button" className="btn button btn-color col-lg-5 col-sm-3 btn-sm" onClick={() => props.setPage(`albumNew`)}>
                             Créer un nouvel album
                         </button>
 
-                        <button type="button" className="btn button btn-color col-lg-5 col-sm-3 btn-sm" onClick={() => props.setPage(``)}>
+                        <button type="button" className="btn button btn-color col-lg-5 col-sm-3 btn-sm" onClick={() => props.setPage(`albumsSelect`)}>
                             Voir tous mes albums
                         </button>
                     </div>
