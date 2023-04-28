@@ -89,7 +89,6 @@ export default function Register(props: {
             requestOptions
         );
         const responseJson = await response.json();
-        console.log(response);
 
         // Si la réponse du json est dans la console, alors on efface les imports du formulaire
         if (responseJson.statusCode === 201)
@@ -149,7 +148,7 @@ export default function Register(props: {
 
                         {/* <!-- Email input --> */}
                         <label className='email'>Votre adresse mail :</label>
-                        <input required type="email" className="form-control" placeholder="Email" value={emailInput} onChange={(event) => setEmailInput(event.target.value)}></input>
+                        <input required type="email" className="form-control" placeholder="name@example.com" value={emailInput} onChange={(event) => setEmailInput(event.target.value)}></input>
 
                         {/* <!-- Password input --> */}
                         <label className='password'>Votre mot de passe :</label>

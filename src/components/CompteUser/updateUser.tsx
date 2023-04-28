@@ -78,7 +78,7 @@ export default function UpdateUsers(props: {
 
                         {/* <!-- Email input --> */}
                         <label className='email'>Votre adresse mail :</label>
-                        <input required type="email" name="email" className="form-control" placeholder="Email" defaultValue={user.email} onChange={(e) => inputChange(e)} />
+                        <input required type="email" name="email" className="form-control" placeholder="name@example.com" defaultValue={user.email} onChange={(e) => inputChange(e)} />
 
                         {/* <!-- Password input --> */}
                         {/* <label className='password'>Votre mot de passe :</label>

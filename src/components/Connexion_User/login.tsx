@@ -37,7 +37,6 @@ export default function Login(props: {
 
         const response = await fetch(`${BASE_URL}auth/login`, requestOptions);
         const responseJson = await response.json();
-        console.log(responseJson);
 
         if (responseJson.access_token)
         {
@@ -72,7 +71,7 @@ export default function Login(props: {
                         {/* <!-- Email input --> */}
                         <div className="form-outline mb-4 mt-4">
                             <label className='email'>Votre adresse mail :</label>
-                            <input type="email" className="form-control  col-lg-5 col-sm-10" placeholder="Email" value={emailInput} onChange={(event) => setEmailLogInput(event.target.value)}></input>
+                            <input type="name@example.com" className="form-control  col-lg-5 col-sm-10" placeholder="Email" value={emailInput} onChange={(event) => setEmailLogInput(event.target.value)}></input>
 
                             {/* <!-- Password input --> */}
 
