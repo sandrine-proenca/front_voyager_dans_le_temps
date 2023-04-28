@@ -8,8 +8,9 @@ import { TUser } from './Types/TUser';
 import { CompteUser } from './components/CompteUser/compteUser';
 import UpdateUsers from './components/CompteUser/updateUser';
 import DeleteUser from './components/CompteUser/deleteUser';
-import { AlbumsSelect } from './components/Album/AlbumsSelect';
-import { AlbumNew } from './components/Album/AlbumNew';
+import CreateAlbum from './components/Album/createAlbum';
+import SelectAlbums from './components/Album/selectAlbums';
+/* import { AlbumsSelect } from './components/Album/selectAlbums'; */
 
 export default function App() {
 
@@ -31,8 +32,8 @@ export default function App() {
       {page === `compteUser` && <CompteUser setPage={setPage}/>}
       {page === `updateUsers` && <UpdateUsers setPage={setPage}/>}
       {page === `deleteUser` && <DeleteUser setPage={setPage}/>}
-      {page === `albumsSelect` && <AlbumsSelect setPage={setPage}/>}
-      {page === `albumNew` && <AlbumNew setPage={setPage}/>}
+      {page === `selectAlbums` && <SelectAlbums setPage={setPage}/>}
+      {page === `createAlbum` && <CreateAlbum setPage={setPage}/>}
       
 
     </AuthContext.Provider>
