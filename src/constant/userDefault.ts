@@ -1,4 +1,5 @@
 import { TUser } from "../Types/TUser";
+import { NO_PHOTO } from "./NoPhoto";
 
 export const userDefault: TUser = {
     id:0,
@@ -15,15 +16,6 @@ export const userDefault: TUser = {
     myself: "",
     travel: "",
     anecdote: "",
-    album: [{
-        id: 0,
-        name: "",
-        photo: [{
-            id: 0,
-            photo: "",
-            information: "",
-            mimeType: "",
-        }],
-    }],
+    album: [],
     access_token: "",
 };

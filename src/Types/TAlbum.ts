@@ -1,4 +1,13 @@
-export type TAlbum = {
+import { TPhoto } from "./TPhoto";
+
+export type TAlbums = {
     id: number,
-    name: string
+    name: string,
+    userId: number,
+    photos: TPhoto
 }
+
+
+export type TGestAlbums = {
+    id: number;
+};

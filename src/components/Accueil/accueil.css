@@ -20,7 +20,7 @@ body {
     background-size: cover;
 }
 
-.presentation, .login, .register, .compteUser,.updateUsers {
+.presentation, .login, .register, .compteUser,.updateUsers, .createAlbum, .selectAlbums {
     padding-top: 20px;
     padding-bottom: 20px;
     margin: auto;
