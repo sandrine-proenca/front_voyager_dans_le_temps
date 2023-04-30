@@ -12,9 +12,9 @@ export default function SelectAlbums(props: {
 
     const getAllAlbumsOfUser = user.albums?.map((itemAlbum, i) => (
         <div key={i} className="albumName">
-            <h5 onClick={() => { setAlbum(itemAlbum); props.setPage('compteUser') }}> {itemAlbum.name}</h5>
-                <button type="button" className="btn button btn-color col-lg-5 col-sm-3 btn-sm" onClick={() => props.setPage(`compteUser`)}>Supprimer</button>
-                <button type="button" className="btn button btn-color col-lg-5 col-sm-3 btn-sm" onClick={() => props.setPage(`compteUser`)}>Modifier</button>
+            <button type="button" className="btn buttonAlbum btn-color col-lg-7 col-sm-3 btn-sm" onClick={() => { setAlbum(itemAlbum); props.setPage('compteUser') }}> Album : {itemAlbum.name}</button>
+            <button type="button" className="btn button btn-color col-lg-5 col-sm-3 btn-sm" onClick={() => props.setPage(`compteUser`)}>Supprimer</button>
+            <button type="button" className="btn button btn-color col-lg-5 col-sm-3 btn-sm" onClick={() => props.setPage(`compteUser`)}>Modifier</button>
         </div>
 
     ));
@@ -22,22 +22,15 @@ export default function SelectAlbums(props: {
     return (
         <div className="selectAlbums">
             <div className="container  text-center">
-                <div className=" form-log rounded-5 shadow-5p-5">
-
-                    <h3>
-                        {getAllAlbumsOfUser}
-                    </h3>
-
-                    <div className='row justify-content-evenly text-center align-items-center mt-5'>
-
-                        <button type="button" className="btn button btn-color col-lg-5 col-sm-3 btn-sm" onClick={() => props.setPage(`compteUser`)}>
-                            Mon compte
-                        </button>
-
+                {/* <div className=' justify-content-evenly text-center align-items-center mt-8'> */}
+                    <button type="button" className="btn button btn-color col-lg-5 col-sm-3 btn-sm" onClick={() => props.setPage(`compteUser`)}>
+                        Retour à mon compte !
+                    </button>
+                    <div className=" form-log rounded-5 shadow-5p-5">
+                            {getAllAlbumsOfUser}
                     </div>
-
                 </div>
-            </div>
+            {/* </div> */}
         </div>
     );
 }

@@ -12,7 +12,7 @@ export function CompteUser(props: {
     return (
         <div className="compteUser">
             <div className="container  text-center">
-                <h3>Votre compte:</h3>
+                <h3>VOTRE COMPTE</h3>
                 <h4>Votre nom:</h4>
                 <p>{user.lastname}</p>
                 <h4>Votre prénom:</h4>
@@ -38,30 +38,26 @@ export function CompteUser(props: {
                 <h4>Vos anecdotes:</h4>
                 <p>{user.anecdote}</p>
 
-                <div className=" form-log rounded-5 shadow-5p-5">
-                    <div className='row justify-content-evenly text-center align-items-center mt-5'>
 
-                        <button type="button" className="btn button btn-color col-lg-5 col-sm-3 btn-sm" onClick={() => props.setPage(`updateUsers`)}>
-                            Modifier mon compte
-                        </button>
+                <button type="button" className="btn button btn-color col-lg-5 col-sm-3 btn-sm" onClick={() => props.setPage(`updateUsers`)}>
+                    Modifier mon compte
+                </button>
 
-                        <button type="button" className="btn button btn-color col-lg-5 col-sm-3 btn-sm" onClick={() => props.setPage(`deleteUser`)}>
-                            Supprimer mon compte
-                        </button>
+                <button type="button" className="btn button btn-color col-lg-5 col-sm-3 btn-sm" onClick={() => props.setPage(`deleteUser`)}>
+                    Supprimer mon compte
+                </button>
 
-                        <button type="button" className="btn button btn-color col-lg-5 col-sm-3 btn-sm" onClick={() => props.setPage(`createAlbum`)}>
-                            Créer un nouvel album
-                        </button>
+                <button type="button" className="btn button btn-color col-lg-5 col-sm-3 btn-sm" onClick={() => props.setPage(`createAlbum`)}>
+                    Créer un nouvel album
+                </button>
 
-                        <button type="button" className="btn button btn-color col-lg-5 col-sm-3 btn-sm" onClick={() => props.setPage(`selectAlbums`)}>
-                            Voir tous mes albums
-                        </button>
+                <button type="button" className="btn button btn-color col-lg-5 col-sm-3 btn-sm" onClick={() => props.setPage(`selectAlbums`)}>
+                    Voir tous mes albums
+                </button>
 
-                        <button type="button" className="btn button btn-color col-lg-5 col-sm-3 btn-sm" onClick={() => props.setPage(`accueil`)}>
-                            Déconnexion
-                        </button>
-                    </div>
-                </div>
+                <button type="button" className="btn button btn-color col-lg-5 col-sm-3 btn-sm" onClick={() => props.setPage(`accueil`)}>
+                    Déconnexion
+                </button>
             </div>
         </div>
     )

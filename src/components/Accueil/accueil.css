@@ -75,7 +75,11 @@ h2 {
 }
 
 h3 {
-    padding-top: 20px;
+    border: 3px	black outset;
+    border-radius: 30px / 30px;
+    box-shadow: 6px 6px 8PX black;
+    font-weight: bold;
+    padding: 20px;
     font-size: 3em;
 }
 
@@ -83,18 +87,11 @@ h4 {
     font-weight: bold;
 }
 
-h5 {
-    font-size: 1.5em!important;
-    border: 1px black dotted;
-    border-radius: 30px / 30px;
-
-}
-
 .albumName {
     border: 3px black outset;
     border-radius: 20px / 20px;
     margin: 10px;
-    padding: 10px;
+    padding: 5px;
 }
 
 p {
@@ -110,10 +107,26 @@ p {
     text-align: center;
     text-overflow: ellipsis;
     color: #FAEBD7!important;
-    background-color: 	#696969!important;
+    background-color: #696969!important;
+    box-shadow: 6px 6px 8PX black;
     margin: 10px;
     width: 100;
 }
+
+.buttonAlbum {
+    font-style: italic;
+    font-weight: bold!important;
+    font-size: 1em!important;
+    text-align: center;
+    text-overflow: ellipsis;
+    margin: 10px;
+    width: 100;
+    border: 1px black outset!important;
+    border-radius: 20px / 20px!important;
+    box-shadow: 6px 6px 8PX black;
+    margin: 5px;
+}
+
 
 footer {
     text-align: center;
