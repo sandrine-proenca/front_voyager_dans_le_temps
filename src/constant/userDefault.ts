@@ -16,6 +16,6 @@ export const userDefault: TUser = {
     myself: "",
     travel: "",
     anecdote: "",
-    album: [],
+    albums: [],
     access_token: "",
 };
