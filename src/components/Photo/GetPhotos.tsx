@@ -2,7 +2,9 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../context/authContext";
 import { BASE_URL } from "../../constant/base_url";
 
-export default function GetPhotos(){
+export default function GetPhotos(props: {
+    setPage: React.Dispatch<React.SetStateAction<string>>;
+}){
     const token = useContext(AuthContext).user?.access_token;
     const myHeaders = new Headers();
     myHeaders.append('Authorization', `Bearer ${token}`);

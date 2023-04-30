@@ -11,7 +11,7 @@ export default function UpdateUsers(props: {
 
     const token = user.access_token;
 
-    const { album, id, password, access_token, ...newUser } = user;
+    const { albums, id, password, access_token, ...newUser } = user;
 
     const [ userUpdated, setUserUpdated ] = useState(newUser);
 

@@ -12,9 +12,6 @@ export function CompteUser(props: {
     return (
         <div className="compteUser">
             <div className="container  text-center">
-                <div className="position-relative">
-                    <button type="button" className="btn-close position-absolute top-0 end-0 text-white" onClick={() => props.setPage(`accueil`)}></button>
-                </div>
                 <h3>Votre compte:</h3>
                 <h4>Votre nom:</h4>
                 <p>{user.lastname}</p>
@@ -58,6 +55,10 @@ export function CompteUser(props: {
 
                         <button type="button" className="btn button btn-color col-lg-5 col-sm-3 btn-sm" onClick={() => props.setPage(`selectAlbums`)}>
                             Voir tous mes albums
+                        </button>
+
+                        <button type="button" className="btn button btn-color col-lg-5 col-sm-3 btn-sm" onClick={() => props.setPage(`accueil`)}>
+                            Déconnexion
                         </button>
                     </div>
                 </div>
