@@ -1,4 +1,4 @@
-import { TAlbums } from "./TAlbum"
+import { TAlbum } from "./TAlbum"
 
 export type TUser = {
     id: number,
@@ -15,6 +15,6 @@ export type TUser = {
     myself: string,
     travel: string,
     anecdote: string,
-    album: TAlbums[],
+    albums: TAlbum[],
     access_token: string
 }
