@@ -10,6 +10,8 @@ import UpdateUsers from './components/CompteUser/updateUser';
 import DeleteUser from './components/CompteUser/deleteUser';
 import CreateAlbum from './components/Album/createAlbum';
 import SelectAlbums from './components/Album/selectAlbums';
+import { AlbumContextProvider } from './context/albumContext';
+import GetPhotos from './components/Photo/GetPhotos';
 /* import { AlbumsSelect } from './components/Album/selectAlbums'; */
 
 export default function App() {
@@ -24,7 +26,7 @@ export default function App() {
       user: user,
       setUser: setUser
       }}>
-
+      <AlbumContextProvider>
       <Navbar/>
       {page === `accueil` && <Accueil setPage={setPage} page={page}/>}
       {page === `register` && <Register setPage={setPage} page={page}/>}
@@ -34,8 +36,9 @@ export default function App() {
       {page === `deleteUser` && <DeleteUser setPage={setPage}/>}
       {page === `selectAlbums` && <SelectAlbums setPage={setPage}/>}
       {page === `createAlbum` && <CreateAlbum setPage={setPage}/>}
+      {page === `getPhoto` && <GetPhotos setPage={setPage}/>}
       
-
+      </AlbumContextProvider>
     </AuthContext.Provider>
 
   );
