@@ -1,31 +1,39 @@
 import { ReactElement, createContext, useState } from 'react';
-import { TGestAlbums } from '../Types/TAlbum';
-import { albumDefault } from '../constant/DefaultAlbum';
+/* import { TGestAlbums } from '../Types/TAlbum'; */
+import { DEFAULT_ALBUM } from '../constant/DefaultAlbum';
+import { TAlbum } from '../Types/TAlbum';
 
 
 interface AlbumContextProps {
     children: ReactElement;
 }
 export interface AlbumContextInterface {
-    albumNumber: TGestAlbums;
-    setAlbum: (albumNumber: TGestAlbums) => void;
+    album: TAlbum;
+    setAlbum: (album: TAlbum) => void;
 }
+
+
+
 export const AlbumContext = createContext<AlbumContextInterface>({
-    albumNumber: albumDefault,
-    setAlbum: (albumNumber: TGestAlbums) => {},
+    album: DEFAULT_ALBUM,
+    setAlbum: (album: TAlbum) => {},
 });
-export const AlbumContextProvider = ({ children }: AlbumContextProps) => {
-    const [albumNumber, setAlbumNumber] = useState<TGestAlbums>(albumDefault);
-    const handleAlbum = (albumNumber: TGestAlbums) => {
-        setAlbumNumber(albumNumber);
+
+
+
+export const AlbumContextProvider = (props: {children: (JSX.Element | false)[]}) => {
+    const [album, setAlbum] = useState<TAlbum>(DEFAULT_ALBUM);
+    const handleAlbum = (album: TAlbum) => 
+    {
+        setAlbum(album);
     };
     const contextValue = {
-        albumNumber: albumNumber,
+        album: album,
         setAlbum: handleAlbum,
     };
     return (
         <AlbumContext.Provider value={contextValue}>
-            {children}
+            {props.children}
         </AlbumContext.Provider>
     );
 };
