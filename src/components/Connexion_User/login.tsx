@@ -1,5 +1,4 @@
 import { useContext, useState } from 'react';
-import { AuthContext } from '../../context/authContext';
 import { BASE_URL } from '../../constant/base_url';
 import '../Accueil/accueil.css';
 import { UserContext } from '../../context/userContext';
@@ -17,8 +16,7 @@ export default function Login(props: {
 
     const [ emailInput, setEmailLogInput ] = useState("")
     const [ passwordInput, setPasswordLogInput ] = useState("")
-    const {user, onUserChange} = useContext(UserContext)
-    const auth = useContext(AuthContext)
+    const {onUserChange} = useContext(UserContext)
     //console.log(auth);    
 
     async function fetchDataLog()

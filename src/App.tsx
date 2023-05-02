@@ -11,7 +11,9 @@ import DeleteUser from './components/CompteUser/deleteUser';
 import CreateAlbum from './components/Album/createAlbum';
 import SelectAlbums from './components/Album/selectAlbums';
 import { AlbumContextProvider } from './context/albumContext';
-import GetPhotos from './components/Photo/GetPhotos';
+import SelectPhotos from './components/Photo/selectPhotos';
+import NewPhotos from './components/Photo/NewPhoto';
+/* import { PhotoContextProvider } from './context/photoContext'; */
 /* import { AlbumsSelect } from './components/Album/selectAlbums'; */
 
 export default function App() {
@@ -36,8 +38,9 @@ export default function App() {
       {page === `deleteUser` && <DeleteUser setPage={setPage}/>}
       {page === `selectAlbums` && <SelectAlbums setPage={setPage}/>}
       {page === `createAlbum` && <CreateAlbum setPage={setPage}/>}
-      {page === `getPhoto` && <GetPhotos setPage={setPage}/>}
-      
+      {page === `selectPhotos` && <SelectPhotos setPage={setPage}/>}{page === `newPhoto` && <NewPhotos setPage={setPage}/>}
+      {/* <PhotoContextProvider>
+      </PhotoContextProvider> */}
       </AlbumContextProvider>
     </AuthContext.Provider>
 

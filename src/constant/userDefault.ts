@@ -1,5 +1,4 @@
 import { TUser } from "../Types/TUser";
-import { NO_PHOTO } from "./NoPhoto";
 
 export const userDefault: TUser = {
     id:0,

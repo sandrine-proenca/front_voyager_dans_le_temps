@@ -1,12 +1,12 @@
-import { ReactElement, createContext, useState } from 'react';
+import {  createContext, useState } from 'react';
 /* import { TGestAlbums } from '../Types/TAlbum'; */
 import { DEFAULT_ALBUM } from '../constant/DefaultAlbum';
 import { TAlbum } from '../Types/TAlbum';
 
 
-interface AlbumContextProps {
+/* interface AlbumContextProps {
     children: ReactElement;
-}
+} */
 export interface AlbumContextInterface {
     album: TAlbum;
     setAlbum: (album: TAlbum) => void;

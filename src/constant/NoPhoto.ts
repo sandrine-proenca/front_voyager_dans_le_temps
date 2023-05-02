@@ -1,7 +1,5 @@
 export const NO_PHOTO = {
     id: 0,
-    photo: "",
-    information: "",
-    mimeType: "",
+    file: "",
     albumId: 0
 }

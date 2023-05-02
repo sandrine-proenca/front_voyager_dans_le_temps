@@ -1,6 +1,7 @@
 export const DEFAULT_PHOTO = {
-    id: -1,
-    photo: "Nouvelle photo",
-    information: "Nouvelle Information",
-    mimeType: "Nouveau mimeType"
+    id: 0,
+    photo: "",
+    information: "",
+    mimeType: "",
+    albumId: 0
 }

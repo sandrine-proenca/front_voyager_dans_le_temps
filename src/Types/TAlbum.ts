@@ -1,10 +1,10 @@
-import { TPhoto } from "./TPhoto";
+import { TPhotos } from "./TPhotos";
 
 export type TAlbum = {
     id: number,
     name: string,
     userId: number,
-    photos: TPhoto[]
+    photos: TPhotos[]
 }
 
 
